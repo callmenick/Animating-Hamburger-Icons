@@ -1,0 +1,24 @@
+/* =============================================================================
+  BASE
+============================================================================= */
+
+/* body */
+
+body {
+  background-color: rgb(59,59,59);
+  color: $neutral;
+  font-family: $font-family--primary;
+  font-size: 15px;
+  line-height: $line-height--medium;
+}
+
+/* text level semantics */
+
+a {
+  text-decoration: none;
+  color: $accent;
+}
+
+a:hover {
+  color: $accent-dark;
+}

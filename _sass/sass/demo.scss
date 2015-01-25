@@ -1,0 +1,289 @@
+// =============================================================================
+// CONFIG
+// =============================================================================
+
+@import "partials/config";
+
+/* =============================================================================
+  DEMO STUFF
+============================================================================= */
+
+.demo-title {
+  margin-bottom: 24px;
+  color: $accent;
+  font-size: 28px;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item {
+  margin: 12px;
+}
+
+/* =============================================================================
+  MENU TOGGLE SWITCHES
+============================================================================= */
+
+// vars
+
+$button-width: 108px;
+$button-height: 96px;
+$bar-thickness: 6px;
+$button-pad: 18px;
+$button-trans-delay: 0.3s;
+
+/**
+ * Toggle Switch Globals
+ *
+ * All switches should take on the class `cmn-toggle-switch` as well as their
+ * variant that will give them unique properties. This class is an overview
+ * class that acts as a reset for all versions of the icon.
+ */
+
+.cmn-toggle-switch {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: $button-width;
+  height: $button-height;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background $button-trans-delay;
+}
+
+.cmn-toggle-switch:focus {
+  outline: none;
+}
+
+.cmn-toggle-switch span {
+  display: block;
+  position: absolute;
+  top: ($button-height / 2) - ($bar-thickness / 2);
+  left: $button-pad;
+  right: $button-pad;
+  height: $bar-thickness;
+  background: rgb(255,255,255);
+}
+
+.cmn-toggle-switch span::before,
+.cmn-toggle-switch span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: $bar-thickness;
+  background-color: #fff;
+  content: "";
+}
+
+.cmn-toggle-switch span::before {
+  top: -(($button-height / 2) - ($bar-thickness / 2) - $button-pad);
+}
+
+.cmn-toggle-switch span::after {
+  bottom: -(($button-height / 2) - ($bar-thickness / 2) - $button-pad);
+}
+
+/**
+ * Style 1
+ *
+ * Rotating hamburger icon (rot), that simply rotates 90 degrees when activated.
+ * Nothing too fancy, simple transition.
+ */
+
+.cmn-toggle-switch__rot {
+  background-color: rgb(40,170,220);
+}
+
+.cmn-toggle-switch__rot span {
+  transition: transform $button-trans-delay;
+}
+
+/* active state, i.e. menu open */
+
+.cmn-toggle-switch__rot.active {
+  background-color: darken(rgb(40,170,220), 20%);
+}
+
+.cmn-toggle-switch__rot.active span {
+  transform: rotate(90deg);
+}
+
+/**
+ * Style 2
+ * 
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+
+.cmn-toggle-switch__htx {
+  background-color: rgb(255,50,100);
+}
+
+.cmn-toggle-switch__htx span {
+  transition: background 0 $button-trans-delay;
+}
+
+.cmn-toggle-switch__htx span::before,
+.cmn-toggle-switch__htx span::after {
+  transition-duration: $button-trans-delay, $button-trans-delay;
+  transition-delay: $button-trans-delay, 0;
+}
+
+.cmn-toggle-switch__htx span::before {
+  transition-property: top, transform;
+}
+
+.cmn-toggle-switch__htx span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+
+.cmn-toggle-switch__htx.active {
+  background-color: darken(rgb(255,50,100), 20%);
+}
+
+.cmn-toggle-switch__htx.active span {
+  background: none;
+}
+
+.cmn-toggle-switch__htx.active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.cmn-toggle-switch__htx.active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.cmn-toggle-switch__htx.active span::before,
+.cmn-toggle-switch__htx.active span::after {
+  transition-delay: 0, $button-trans-delay;
+}
+
+/**
+ * Style 3
+ *
+ * Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
+ * arrow. Usually indicates an off canvas menu sliding in from left that
+ * will be close on re-click of the icon.
+ */
+
+.cmn-toggle-switch__htla {
+  background-color: rgb(50,220,100);
+}
+
+.cmn-toggle-switch__htla span {
+  transition: transform $button-trans-delay;
+}
+
+.cmn-toggle-switch__htla span::before,
+.cmn-toggle-switch__htla span::after {
+  
+}
+
+.cmn-toggle-switch__htla span::before {
+  transform-origin: top right;
+  transition: transform $button-trans-delay, width $button-trans-delay, top $button-trans-delay;
+}
+
+.cmn-toggle-switch__htla span::after {
+  transform-origin: bottom right;
+  transition: transform $button-trans-delay, width $button-trans-delay, bottom $button-trans-delay;
+}
+
+/* active state, i.e. menu open */
+
+.cmn-toggle-switch__htla.active {
+  background-color: darken(rgb(50,220,100), 20%);
+}
+
+.cmn-toggle-switch__htla.active span {
+  transform: rotate(180deg);
+}
+
+.cmn-toggle-switch__htla.active span::before,
+.cmn-toggle-switch__htla.active span::after {
+  width: 50%;
+}
+
+.cmn-toggle-switch__htla.active span::before {
+  top: 0;
+  transform: translateX($button-width/2 - $button-pad + $bar-thickness) translateY($bar-thickness/2) rotate(45deg);
+}
+
+.cmn-toggle-switch__htla.active span::after {
+  bottom: 0;
+  transform: translateX($button-width/2 - $button-pad + $bar-thickness) translateY(-$bar-thickness/2) rotate(-45deg);
+}
+
+/**
+ * Style 4
+ *
+ * Hamburger to right-arrow (htra). Hamburger menu transforms to a
+ * right-pointing arrow. Usually indicates an off canvas menu sliding in from 
+ * right that will be close on re-click of the icon.
+ */
+
+.cmn-toggle-switch__htra {
+  background-color: rgb(255,150,80);
+}
+
+.cmn-toggle-switch__htra span {
+  transition: transform $button-trans-delay;
+}
+
+.cmn-toggle-switch__htra span::before,
+.cmn-toggle-switch__htra span::after {
+  
+}
+
+.cmn-toggle-switch__htra span::before {
+  transform-origin: top left;
+  transition: transform $button-trans-delay, width $button-trans-delay, top $button-trans-delay;
+}
+
+.cmn-toggle-switch__htra span::after {
+  transform-origin: bottom left;
+  transition: transform $button-trans-delay, width $button-trans-delay, bottom $button-trans-delay;
+}
+
+/* active state, i.e. menu open */
+
+.cmn-toggle-switch__htra.active {
+  background-color: darken(rgb(255,150,80), 20%);
+}
+
+.cmn-toggle-switch__htra.active span {
+  transform: rotate(180deg);
+}
+
+.cmn-toggle-switch__htra.active span::before,
+.cmn-toggle-switch__htra.active span::after {
+  width: 50%;
+}
+
+.cmn-toggle-switch__htra.active span::before {
+  top: 0;
+  transform: translateX(-$bar-thickness) translateY($bar-thickness/2) rotate(-45deg);
+}
+
+.cmn-toggle-switch__htra.active span::after {
+  bottom: 0;
+  transform: translateX(-$bar-thickness) translateY(-$bar-thickness/2) rotate(45deg);
+}
