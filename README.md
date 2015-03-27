@@ -1,6 +1,6 @@
 # Animating CSS-Only Hamburger Menu Icons
 
-A collection of animating CSS-only hamburger menu icons. View demo [here](http://callmenick.com/development/css-hamburger-menu-icons/).
+A collection of animating CSS-only hamburger menu icons. View demo [here](http://callmenick.com/_development/css-hamburger-menu-icons/).
 
 ## License
 
@@ -12,4 +12,4 @@ http://callmenick.com
 
 ## Live Demo
 
-[View the live demo here](http://callmenick.com/development/css-hamburger-menu-icons/).
+[View the live demo here](http://callmenick.com/_development/css-hamburger-menu-icons/).
