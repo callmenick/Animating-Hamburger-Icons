@@ -56,7 +56,8 @@ table {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 
 .clearfix::after {
@@ -174,47 +175,54 @@ main {
 }
 
 /* =============================================================================
-  FUSION ADS
+  CARBON AD
 ============================================================================= */
-#fusionads {
+#carbonads {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 20;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.95);
-  font-size: 12px;
-  line-height: 1.2;
-  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+  bottom: 12px;
+  right: 12px;
+  z-index: 1000;
+  padding: 24px 12px 12px 12px;
+  width: 154px;
+  background-color: #fff;
+  line-height: 1.1;
 }
 
-#fusionads .fusion-wrap {
+.carbon-wrap {
   display: block;
-  margin: 0 auto 10px auto;
-  width: 130px;
+  margin: 0 0 4px 0;
 }
 
-#fusionads a.fusion-text {
+.carbon-img {
   display: block;
-  color: #787878;
-}
-
-#fusionads a.fusion-img {
-  display: block;
-  margin-bottom: 10px;
+  margin: 0 0 4px 0;
+  padding: 0;
   width: 130px;
   height: 100px;
-  background-color: #fff;
 }
 
-#fusionads a.fusion-img img {
+.carbon-text {
+  color: #818181;
+  font-size: 12px;
+}
+
+.carbon-poweredby {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.carbonad__close {
   display: block;
-  margin: 0 0 10px 0;
+  position: absolute;
+  top: 0;
+  left: 12px;
+  height: 24px;
+  font-size: 11px;
+  line-height: 24px;
 }
 
-#fusionads a.fusion-poweredby {
-  color: #ff9650;
-}
-#fusionads a.fusion-poweredby:hover {
-  color: #e95d00;
+@media all and (max-width: 660px) {
+  #carbonads {
+    display: none;
+  }
 }
