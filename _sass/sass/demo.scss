@@ -135,13 +135,13 @@ $button-trans-delay: 0.3s;
 }
 
 .cmn-toggle-switch__htx span {
-  transition: background 0 $button-trans-delay;
+  transition: background 0s $button-trans-delay;
 }
 
 .cmn-toggle-switch__htx span::before,
 .cmn-toggle-switch__htx span::after {
   transition-duration: $button-trans-delay, $button-trans-delay;
-  transition-delay: $button-trans-delay, 0;
+  transition-delay: $button-trans-delay, 0s;
 }
 
 .cmn-toggle-switch__htx span::before {
@@ -174,7 +174,7 @@ $button-trans-delay: 0.3s;
 
 .cmn-toggle-switch__htx.active span::before,
 .cmn-toggle-switch__htx.active span::after {
-  transition-delay: 0, $button-trans-delay;
+  transition-delay: 0s, $button-trans-delay;
 }
 
 /**
