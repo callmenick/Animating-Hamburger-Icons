@@ -1,15 +1,13 @@
-# Animating CSS-Only Hamburger Menu Icons
+# Development Demo Template
 
-A collection of animating CSS-only hamburger menu icons. View demo [here](http://callmenick.com/_development/css-hamburger-menu-icons/).
-
-## License
-
-Licensed under the MIT license, http://www.opensource.org/licenses/mit-license.php
-
-Copyright 2014, Call Me Nick
-
-http://callmenick.com
+Just a simple template for my development demos.
 
 ## Live Demo
 
-[View the live demo here](http://callmenick.com/_development/css-hamburger-menu-icons/).
+View the live demo here.
+
+## License & Copyright
+
+Licensed under the [MIT license.](http://www.opensource.org/licenses/mit-license.php)
+
+Copyright 2014, [Call Me Nick.](http://callmenick.com)

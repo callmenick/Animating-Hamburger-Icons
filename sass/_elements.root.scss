@@ -1,0 +1,20 @@
+/* -----------------------------------------------------------------------------
+
+  ROOT ELEMENTS
+  
+----------------------------------------------------------------------------- */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  color: $color--neutral;
+  background-color: #fff;
+  font-family: $font-family--primary;
+  font-size: $font-size--small;
+  line-height: $line-height--medium;
+}

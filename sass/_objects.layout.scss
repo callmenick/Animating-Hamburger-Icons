@@ -1,0 +1,192 @@
+/* -----------------------------------------------------------------------------
+
+  CONTAINER OBJECTS
+  
+----------------------------------------------------------------------------- */
+
+.o-container {
+  margin: 0 auto;
+  padding: 0 12px;
+  max-width: 960px;
+}
+
+@media all and ( min-width: $breakpoint--small ) {
+
+  .o-container {
+    padding: 0 24px;
+  }
+
+}
+
+@media all and ( min-width: $breakpoint--medium ) {
+
+  .o-container {
+    padding: 0 48px;
+  }
+
+}
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+
+  GRID OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.o-grid {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.o-grid__item {
+  padding: 24px;
+}
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+
+  HEADER OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.o-header {
+  margin: 0;
+  padding: 0;
+}
+
+.o-header-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color--theme;
+}
+
+.o-header-nav__link {
+  padding: 12px;
+  color: #fff;
+}
+
+.o-header-nav__link:hover {
+  color: #fff;
+  background-color: $color--theme-dark;
+}
+
+.o-header__title {
+  margin: 24px;
+  padding: 0;
+  color: $color--neutral-light;
+  font-size: $font-size--xlarge;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media all and ( min-width: $breakpoint--small ) {
+  
+  .o-header__title {
+    margin: 36px;
+    font-size: $font-size--ultra;
+  }
+
+}
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+
+  MAIN OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.o-main {
+  /**/
+}
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+
+  SUB-NAVIGATION OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.o-sub-nav {
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+.o-sub-nav__items {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.o-sub-nav__item {
+  margin: 0;
+  padding: 4px;
+}
+
+.o-sub-nav__link {
+  display: block;
+  margin: 0;
+  padding: 4px 24px;
+  border: solid 2px $color--theme;
+}
+
+.o-sub-nav__link:hover,
+.o-sub-nav__item.active .o-sub-nav__link {
+  color: #fff;
+  background-color: $color--theme;
+}
+
+@media all and ( min-width: $breakpoint--medium ) {
+  
+  .o-sub-nav {
+    margin: 0 0 48px 0;
+  }
+
+}
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+
+  FOOTER OBJECT
+  
+----------------------------------------------------------------------------- */
+
+.o-footer {
+  padding: 12px 0;
+  text-align: center;
+}
+
+@media all and ( min-width: $breakpoint--small ) {
+
+  .o-footer {
+    padding: 24px 0;
+  }
+
+}
+
+@media all and ( min-width: $breakpoint--medium ) {
+
+  .o-footer {
+    padding: 48px 0;
+  }
+
+}

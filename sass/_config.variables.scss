@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+//
+// FONTS
+//
+// -----------------------------------------------------------------------------
+
+$font-family--primary: "Oxygen", Helvetica, sans-serif;
+
+$font-size--xsmall: 12px;
+$font-size--small: 14px;
+$font-size--smedium: 16px;
+$font-size--medium: 18px;
+$font-size--large: 22px;
+$font-size--xlarge: 28px;
+$font-size--xxlarge: 36px;
+
+$font-size--ultra: 42px;
+$font-size--ultra-large: 48px;
+$font-size--ultra-xlarge: 60px;
+$font-size--ultra-xxlarge: 84px;
+
+$line-height--small: 1.2;
+$line-height--medium: 1.8;
+$line-height--large: 2.2;
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+//
+// COLORS
+//
+// -----------------------------------------------------------------------------
+
+$color--neutral-xxdark: rgb(21,21,21);
+$color--neutral-xdark: rgb(39,39,39);
+$color--neutral-dark: rgb(59,59,59);
+$color--neutral: rgb(109,109,109);
+$color--neutral-light: rgb(129,129,129);
+$color--neutral-xlight: rgb(179,179,179);
+$color--neutral-xxlight: rgb(231,231,231);
+$color--neutral-xxxlight: rgb(241,241,241);
+
+$color--blue-dark: rgb(0,100,140);
+$color--blue: rgb(40,170,220);
+$color--blue-light: rgb(70,200,250);
+
+$color--theme: rgb(59,59,59);
+$color--theme-dark: darken($color--theme, 20%);
+$color--theme-light: lighten($color--theme, 20%);
+
+
+
+
+
+
+// -----------------------------------------------------------------------------
+//
+// BREAKPOINTS
+//
+// -----------------------------------------------------------------------------
+
+$breakpoint--small: 480px;
+$breakpoint--medium: 720px;
+$breakpoint--large: 1020px;
+$breakpoint--xlarge: 1200px;

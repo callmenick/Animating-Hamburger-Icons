@@ -1,80 +1,86 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-  <!-- title and meta -->
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="description" content="A collection of animating css-only hamburger menu toggle switches that transform when clicked represnting an active (or menu open) state.">
   <title>CSS-Only Hamburger Menu Icons Demo</title>
-
-  <!-- css -->
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/demo.css">
-
-  <!-- modernizr -->
-  <script src="js/common/modernizr.js"></script>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
-
-<div class="wrapper">
-
-  <header class="header__primary clearfix">
-    <div class="header__primary--logo">
-      <a href="http://www.callmenick.com">
-        <img src="img/common/logo.svg" onerror="this.src=logo.png" alt="Call Me Nick - Tutorials, Resources, &amp; Articles for Web Design &amp; Web Development">
-      </a>
-    </div>
-    <nav class="nav__primary">
-      <a class="nav__primary--link tut" data-title="Back To Tutorial" href="http://callmenick.com/post/animating-css-only-hamburger-menu-icons"></a>
-      <a class="nav__primary--link prev" data-title="Pevious Demo" href="http://callmenick.com/_development/icons-css3-transitions/"></a>
-      <a class="nav__primary--link download" data-title="Download Source" href="https://github.com/callmenick/Animating-Hamburger-Icons"></a>
-      <a class="nav__primary--link archive" data-title="Archive" href="http://callmenick.com/archive/"></a>
-    </nav>
-  </header><!-- /.primary-header -->
-
-  <main>
-    <div class="container">
-
-      <h1 class="demo-title">Transforming Hamburger Menu Icons</h1>
-      
-      <div class="items">
-        <div class="item">
-          <button class="cmn-toggle-switch cmn-toggle-switch__rot">
-            <span>toggle menu</span>
-          </button>
-        </div>
-        <div class="item">
-          <button class="cmn-toggle-switch cmn-toggle-switch__htx">
-            <span>toggle menu</span>
-          </button>
-        </div>
-        <div class="item">
-          <button class="cmn-toggle-switch cmn-toggle-switch__htla">
-            <span>toggle menu</span>
-          </button>
-        </div>
-        <div class="item">
-          <button class="cmn-toggle-switch cmn-toggle-switch__htra">
-            <span>toggle menu</span>
-          </button>
-        </div>
-      </div>
-
-      <div id="github-icons"></div>
-
-    </div>
-  </main><!-- /main -->
   
-</div><!-- /#wrapper -->
+<header class="o-header">
+  <nav class="o-header-nav">
+    <a href="http://callmenick.com/_development/icons-css3-transitions" class="o-header-nav__link"><i class="fa fa-arrow-left"></i> Previous Demo</a>
+    <a href="http://callmenick.com/post/animating-css-only-hamburger-menu-icons" class="o-header-nav__link">Back To Article <i class="fa fa-star"></i></a>
+  </nav>
+  <div class="o-container">
+    <h1 class="o-header__title">CSS-Only Hamburger Menu Icons Demo</h1>
+  </div>
+</header>
 
-<!-- js -->
-<script src="js/demo/demo.js"></script>
+<main class="o-content">
+  <div class="o-container">
+    
+    <div class="o-grid">
+      <div class="o-grid__item">
+        <button class="c-hamburger c-hamburger--rot">
+          <span>toggle menu</span>
+        </button>
+      </div>
+      <div class="o-grid__item">
+        <button class="c-hamburger c-hamburger--htx">
+          <span>toggle menu</span>
+        </button>
+      </div>
+      <div class="o-grid__item">
+        <button class="c-hamburger c-hamburger--htla">
+          <span>toggle menu</span>
+        </button>
+      </div>
+      <div class="o-grid__item">
+        <button class="c-hamburger c-hamburger--htra">
+          <span>toggle menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="github-icons"></div>
+  </div>
+</main>
+
+<footer class="o-footer">
+  <div class="o-container">
+    <small>&copy; 2015, callmenick.com</small>
+  </div>
+</footer>
+
+<script>
+  (function() {
+
+    "use strict";
+
+    var toggles = document.querySelectorAll(".c-hamburger");
+
+    for (var i = toggles.length - 1; i >= 0; i--) {
+      var toggle = toggles[i];
+      toggleHandler(toggle);
+    };
+
+    function toggleHandler(toggle) {
+      toggle.addEventListener( "click", function(e) {
+        e.preventDefault();
+        (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+      });
+    }
+
+  })();
+</script>
 
 <!-- EXTERNAL SCRIPTS FOR CALLMENICK.COM, PLEASE DO NOT INCLUDE -->
-<script src="js/common/githubIcons.js"></script>
-<script src="js/common/carbonad.js"></script>
+<script src="js/dist/githubIcons.js"></script>
+<script src="js/dist/carbonAd.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
