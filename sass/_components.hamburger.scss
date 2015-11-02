@@ -35,7 +35,7 @@ $button-transistion-duration: 0.3s;     // The transition duration
   -moz-appearance: none;
   appearance: none;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 0;
   border: none;
   cursor: pointer;
   transition: background $button-transistion-duration;
