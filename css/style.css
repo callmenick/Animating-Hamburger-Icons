@@ -308,7 +308,7 @@ img {
   -moz-appearance: none;
   appearance: none;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 0;
   border: none;
   cursor: pointer;
   -webkit-transition: background 0.3s;
